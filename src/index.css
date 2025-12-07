@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* GLOBAL LIGHT LAVENDER BACKGROUND */
+body {
+  @apply text-gray-800;
+  background-color: #e01ac2 !important; /* light lavender */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* REMOVE old purple gradients */
+:root {
+  --bg: #E6E6FA;
+}
+
+/* Photo frame (keep original gradient) */
+.photo-frame {
+  border-radius: 9999px;
+  padding: 6px;
+  background: linear-gradient(90deg, #ec4899, #8b5cf6, #6366f1);
+}
+
+/* Glass effect for cards */
+.glass {
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Dark mode */
+.dark body {
+  background: #0b1220 !important;
+  color: #e6eef8;
+}
+
+.dark .glass {
+  background: rgba(10, 15, 25, 0.5);
+}
+
+/* Hero fallback */
+#home {
+  position: relative;
+}
+
+/* Mobile bg attachment */
+@media (max-width: 640px) {
+  #home {
+    background-attachment: scroll;
+  }
+}
+
+/* Global link styling */
+a {
+  color: inherit;
+}
